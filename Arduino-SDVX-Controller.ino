@@ -17,7 +17,7 @@ LIST keylist[] =
 };
 
 Encoder encoder1(3, 2);
-Encoder encoder2(0, 1);
+Encoder encoder2(19, 20);
 int o_ec1;
 int o_ec2;
 int Keys = sizeof(keylist) / sizeof(keylist[0]);
@@ -39,15 +39,15 @@ void loop() {
     } else {
       Keyboard.release(keylist[i].keycode);
     }
-  }
-  int ec1 = encoder1.read();
-  int ec2 = encoder2.read();
-  if (ec1 != o_ec1) {
-    Mouse.move(ec1 > o_ec1 ? -5 : 5, 0);
-    o_ec1 = ec1;
-  }
-  if (ec2 != o_ec2) {
-    Mouse.move(0, ec2 > o_ec2 ? -5 : 5);
-    o_ec2 = ec2;
+    int ec1 = encoder1.read();
+    int ec2 = encoder2.read();
+    if (ec1 != o_ec1) {
+      Mouse.move(ec1 > o_ec1 ? -5 : 5, 0);
+      o_ec1 = ec1;
+    }
+    if (ec2 != o_ec2) {
+      Mouse.move(0, ec2 > o_ec2 ? -5 : 5);
+      o_ec2 = ec2;
+    }
   }
 }
