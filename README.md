@@ -1,6 +1,5 @@
 # Arduino-SDVX-Controller
-使用 Arduino 控制的 SOUND VOLTEX 控制器。  
-**本项目还在开发中，仅用于参考**
+使用 Arduino 制作的 SOUND VOLTEX 控制器。
 
 资料：  
 [pro micro 资料](https://learn.sparkfun.com/tutorials/pro-micro--fio-v3-hookup-guide/hardware-overview-pro-micro)   
